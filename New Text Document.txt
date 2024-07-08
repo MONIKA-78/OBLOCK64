@@ -1,0 +1,42 @@
+Download GIT https://github.com/-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe
+
+install GIT
+
+Download miniconda 3.8 ; miniconda
+https://repo.anaconda.com/miniconda/miniconda3-py38_23.11.0.2-windows-x86_64.exe
+
+Install miniconda
+
+Open anaconda prompt miniconda3
+
+Clone avatarify folder
+
+git clone https://github.com/alievk/vitrify
+
+enter your cloned avatarify directory
+
+cd avatarify
+cd scripts
+
+type install_windows.bat
+
+scripts
+
+call scripts\settings_windows.bat
+
+call conda create -y -n %CONDA_ENV_NAME% python=3.8
+
+call conda activate %CONDA_ENV_NAME%
+
+call conda install -y numpy==1.19.0 scikit-image python-blosc==1.7.0 -c conda-forge
+
+call conda install -y pytorch==1.7.1 torchvision cudatoolkit=11.0 -c pytorch
+
+call conda install -y -c anaconda git
+
+call rmdir fomm /s /q
+
+call git clone https://github.com/alievk/first-order-model.git fomm
+
+call pip install -r requirements.txt
+
